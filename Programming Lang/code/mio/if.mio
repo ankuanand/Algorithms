@@ -1,0 +1,12 @@
+# Implement if using boolean logic
+
+set_slot("if", method(
+  # eval condition
+  set_slot("condition", eval_arg(0))
+  condition and( # if true
+    eval_arg(1)
+  )
+  condition or( # if false (else)
+    eval_arg(2)
+  )
+))

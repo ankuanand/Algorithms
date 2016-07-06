@@ -1,0 +1,11 @@
+"yo" or("hi") print
+# => yo
+
+nil or("hi") print
+# => hi
+
+"yo" and("hi") print
+# => hi
+
+1 and(2 or(3)) print
+# => 2

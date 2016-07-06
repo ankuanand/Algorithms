@@ -1,0 +1,13 @@
+require "rake/clean"
+
+CLEAN.include "lexer.rex.rb", "parser.tab.rb"
+
+task :lexer do
+  sh "frex lexer.rex"
+end
+
+task :parser do
+  sh "racc parser.y"
+end
+
+task :default => [:lexer, :parser]

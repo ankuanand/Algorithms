@@ -1,0 +1,13 @@
+if(true,
+  "condition is true" print,
+  # else
+  "nope" print
+)
+# => condition is true
+
+if(false,
+  "nope" print,
+  # else
+  "condition is false" print
+)
+# => condition is false

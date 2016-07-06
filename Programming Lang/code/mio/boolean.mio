@@ -1,0 +1,20 @@
+# An object is always truish
+
+Object set_slot("and", method(
+  eval_arg(0)
+))
+Object set_slot("or", method(
+  self
+))
+
+# ... except nil and false which are false
+
+nil set_slot("and", nil)
+nil set_slot("or", method(
+  eval_arg(0)
+))
+
+false set_slot("and", false)
+false set_slot("or", method(
+  eval_arg(0)
+))

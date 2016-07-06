@@ -1,0 +1,8 @@
+class Awesome:
+  def does_it_work:
+    "yeah!"
+
+awesome_object = Awesome.new
+if awesome_object:
+  print("awesome_object.does_it_work = ")
+  print(awesome_object.does_it_work)

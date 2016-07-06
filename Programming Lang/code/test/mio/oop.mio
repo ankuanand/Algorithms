@@ -1,0 +1,25 @@
+# Create a new object, by cloning the master Object
+set_slot("dude", Object clone)
+# Set a slot on it
+dude set_slot("name", "Bob")
+# Call the slot to retrieve it's value
+dude name print
+# => Bob
+
+# Define a method
+dude set_slot("say_name", method(
+  # Print unevaluated arguments (messages)
+  arguments print
+  # => <Message @name="hello...">
+  
+  # Eval the first argument
+  eval_arg(0) print
+  # => hello...
+  
+  # Access the receiver via `self`
+  self name print
+  # => Bob
+))
+
+# Call that method
+dude say_name("hello...")
